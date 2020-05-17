@@ -348,7 +348,7 @@ spec:
   type: git
   params:
   - name: url
-    value: http://github.com/openshift-pipelines/vote-ui.git
+    value: https://github.com/tnscorcoran/vote-ui.git
 ```
 
 And the following defines the OpenShift internal image registry for the frontend image to be pushed to:
@@ -376,7 +376,7 @@ spec:
   type: git
   params:
   - name: url
-    value: http://github.com/openshift-pipelines/vote-api.git
+    value: https://github.com/tnscorcoran/vote-api.git
 ```
 
 And the following defines the OpenShift internal image registry for the backend image to be pushed to:
@@ -412,8 +412,8 @@ You can see the list of resources created using `tkn`:
 $ tkn resource ls
 
 NAME        TYPE    DETAILS
-api-repo    git     url: http://github.com/openshift-pipelines/vote-api.git
-ui-repo     git     url: http://github.com/openshift-pipelines/vote-ui.git
+api-repo    git     url: https://github.com/tnscorcoran/vote-api.git
+ui-repo     git     url: https://github.com/tnscorcoran/vote-ui.git
 api-image   image   url: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/vote-api:latest
 ui-image    image   url: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/vote-ui:latest
 ```
