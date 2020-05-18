@@ -38,3 +38,23 @@ spec:
   params:
   - name: url
     value: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/vote-ui:latest
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: odh-repo
+spec:
+  type: git
+  params:
+  - name: url
+    value: https://github.com/tnscorcoran/odh-dockerfile.git
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: odh-image
+spec:
+  type: image
+  params:
+  - name: url
+    value: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/odh:latest    
